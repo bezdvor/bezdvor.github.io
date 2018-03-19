@@ -2,11 +2,12 @@
  * Created by Note_Bezdvor on 18.03.2018.
  */
 //"use strict"
+var flag = true
 function initializeSlider(elem,arrImg,width,height){
 	//Создаем внешний контейнер для всех блоков с картинками
 	var container = document.createElement('div')
 	//задаем стили контейнеру согласно параметрам width,height, которые в нашем случае равны 100(см. внизу)
-	container.style = "border:1px solid;width:"+width+"px;height:"+height+"px;margin:auto;position:relative;"
+	container.style = "border:1px solid;width:"+width+"px;height:"+height+"px;margin:auto;position:relative; overflow:hidden;"
 	//перебираем массив с названием картинок, который передали в качестве параметра arrImg(см. внизу)
 	for(var i = 0; i < arrImg.length; i++){
 		//Создаем обертку для картинки на текущей итерации, т.е. для картинки с названием arrImg[i]
@@ -25,7 +26,6 @@ function initializeSlider(elem,arrImg,width,height){
 		//Вставляем обертку с картинкой в контейнер
 		container.appendChild(imgDiv)
 		//Флаг нужен для того, чтоб функция не отрабатывала, пока не завершится предыдущее перемещение картинок
-		var flag = true
 		//назначаем функцию, которая отработает при клике на контейнер и в качестве параметра передаем нативный event(JS сам его подставит)
 		container.onclick = function(event){
 			//Если мы кликнули по картинке и предыдущее перемещение завершилось, тогда будет работать код внутри условия
@@ -64,7 +64,7 @@ function initializeSlider(elem,arrImg,width,height){
 		//создаем искусственное событие клик и устанавливаем режим всплытия {bubbles:true},
 		// т.е. так, как по умолчанию происходят все события
 		//https://learn.javascript.ru/event-bubbling
-		event = new MouseEvent("click",{bubbles:true});
+		var event = new MouseEvent("click",{bubbles:true});
 		//находим картинку, которая находится в активной области контейнера и запускаем событие
 		// (как будто пользователь сам кликнул)
 		container.children[1].firstElementChild.dispatchEvent(event);
@@ -80,3 +80,9 @@ var images = ['first.jpg','five.jpg','four.jpg','second.jpg', 'third.jpg']
 //-ширина
 //-высота
 initializeSlider(slider,images,100,100);
+
+var moveLeft = document.getElementsByClassName('left');
+console.log(moveLeft);
+moveLeft.onclick = function(){
+
+}
