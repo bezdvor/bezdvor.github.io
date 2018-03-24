@@ -1,0 +1,4 @@
+bezdvor.github.io/localStorageDZ/index.html
+bezdvor.github.io/localStorageDZ/cart.html
+bezdvor.github.io/localStorageDZ/index2.html
+bezdvor.github.io/localStorageDZ/index3.html
