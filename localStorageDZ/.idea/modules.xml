@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/locaalStorageDZ.iml" filepath="$PROJECT_DIR$/.idea/locaalStorageDZ.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/localStorageDZ.iml" filepath="$PROJECT_DIR$/.idea/localStorageDZ.iml" />
     </modules>
   </component>
 </project>
