@@ -2,25 +2,71 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width"/>
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="css/bootstrap-grid.min.css"/>
-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css"/>
+    <!--<link rel="stylesheet" href="css/bootstrap-grid.min.css"/>-->
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Prosto+One" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css"/>
     <title>InternetStoreWihtBootstrap</title>
+    <script src="js/functions.js" defer></script>
+    <script src="js/data.js" defer></script>
+    <script src="js/script.js" defer></script>
 </head>
 <body>
-<div class="container">
-    <div class="row">
-        <div class="col-sm-12 col-md-3 col-lg-3"></div>
-        <div class="col-sm-12 col-md-3 col-lg-3"></div>
-        <div class="col-sm-12 col-md-3 col-lg-3"></div>
-        <div class="col-sm-12 col-md-3 col-lg-3"><span class="iconic iconic-cart iconic-lg" title="cart" aria-hidden="true"></span></div>
+<nav class="navbar navbar-expand-lg navbar-light sticky-top" style="background-color: #0D6B7F">
+    <a href="#" class="navbar-brand">
+        <h3 class="h3 text-white">Магазин</h3>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupport">
+        <span class="navbar-toggler-icon text-light"></span>
+    </button>
+    <div class="collapse navbar-collapse border-left border-light" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active"><a href="#" class="nav-link text-light">Каталог</a></li>
+            <li class="nav-item"><a href="#" class="nav-link text-light">Цены</a></li>
+            <li class="nav-item"><a href="#" class="nav-link text-light">Контакты</a></li>
+        </ul>
+        <div class="col-sm-12 col-md-2 col-lg-2 bg-transparent">
+            <div class="korzina">
+            <a href="#"><img class="img-fluid cartImg" src="images/cart-arrow-down.svg" alt="cart"/></a>
+                <div class="card-container" style="display: none;" dataId="123"></div>
+                </div>
+            <div class="popup" style="display: none;"></div>
+        </div></div>
     </div>
-    <div class="w-100"></div>
+</nav>
+<div class="container-fluid">
     <div class="row">
-        <div class="col-sm-12 col-md-4 col-lg-4">rb4tbt4</div>
-        <div class="col-sm-12 col-md-8 col-lg-8">wv3rvrv</div>
+        <div class="col-sm-12 col-md-3 col-lg-3" style="background-color: #0D6B7F">
+            <div style="min-height: 35px;"></div>
+            <form role="form">
+                <div class="form-group">
+                    <label for="inp1" class="text-light">Сортировка по цене</label>
+                    <input class="form-control" type="number" id = 'inp1' placeholder="От">
+                    <hr/>
+                    <input class="form-control" type="number" id = 'inp2' placeholder="До">
+                    <hr/>
+                    <div class="d-flex justify-content-end">
+                        <button id="btn" class="btn btn-outline-light">Сортировать по цене</button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inp3" class="text-light">Сортировка по алфавиту</label>
+                    <input class="form-control" type="text" id = 'inp3' placeholder="Поиск">
+                    <hr/>
+                    <div class="d-flex justify-content-end">
+                        <button id="btn2" class="btn btn-outline-light">Cортировать по алфавиту</button>
+                    </div>
+                </div>
+            </form>
+            <div class="btn-group d-flex justify-content-end" style="margin-bottom: 3%;">
+                <button id="btn3" class="btn btn-outline-light">Есть на складе</button>
+                <button id="btn4" class="btn btn-outline-light">Нет на складе</button>
+            </div>
+        </div>
+        <div id="data" class="col-sm-12 col-md-9 col-lg-9" style="background-image: url(images/white_wave_@2X.png);">
+        </div>
     </div>
 </div>
 </body>

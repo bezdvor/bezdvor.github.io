@@ -1,5 +1,76 @@
 *{font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;}
-div{border: 1px solid; min-height: 50px; background-color: #99ffb3
+    /*margin: 0; padding: 0;*/
 }
+/*div{border: 1px solid; min-height: 50px; background-color: #99ffb3*/
+/*}*/
+.cartImg{max-height: 50px; padding: 3%; margin-left: 66%;}
+
+.btn-outline-light:hover{background-color: rgba(21, 171, 204, 0.86);}
+
+/*.btn2{*/
+    /*margin-top: 5%;*/
+    /*width: 97%*/
+/*}*/
+
+.color2{
+    margin-top: 20px;
+    min-height: 70px;
+    color: #fff;
+    /*background-color:;*/
+    text-align:right;
+}
+.qaz{
+    padding-top: 40px;
+}
+.cardOfGoods{
+    max-width: 32%;
+    min-height: 600px;
+    box-sizing: border-box;
+    float: left;
+    padding:20px;
+}
+.korzina{
+    position: relative;
+    float: right;
+    padding-right: 15%;
+}
+.card-container{
+    position: absolute;
+    width: 600px;
+    height: 800px;
+    border: 1px solid;
+    border-radius: 5px;
+    background-color: #15ddfe;
+    top: 58px;
+    left: -500px;
+    overflow-y: scroll;
+    z-index: 2;
+}
+.popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(51, 114, 127, 0.5);
+    z-index:1;
+}
+
+.cartname{
+    font-family: 'Prosto One', cursive;
+    background-color: #0d6b7f; border-radius: 3px;
+    text-align: center; color: #fff; font-size: 1.25rem;
+}
+.cartprice{ background-color: #15cff0; border-radius: 4px;
+    padding: 3%;     font-family: 'Prosto One', cursive;
+    text-align: center; color: #0d566a; font-size: 1.25rem;
+    font-weight: 700; border: 2px solid #0d6b7f;
+}
+.img-container { position: relative; margin: auto;
+    height: 350px;
+}
+.cartWrite{text-align: center; font-size: 1rem}
+/*.tovarList {*/
+    /*background-image: url("img/spiration-light.png");*/
+    /*background-repeat: repeat;*/
+    /*background-position: center;*/
