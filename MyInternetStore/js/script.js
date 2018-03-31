@@ -7,7 +7,6 @@ var arr = [];
 for(var i = 0;i < btns.length;i++){
 	arr[i] = btns[i]
 }
-// var goodInCard;
 arr.forEach(function(item){
 	item.onclick = function(){
 		var currentGoodName = this.getAttribute('ddd');
@@ -27,16 +26,19 @@ arr.forEach(function(item){
 		outerCard.setAttribute('ddd',currentGoodName);
 
 		var goodInCard = document.createElement('div');
+		goodInCard.setAttribute('class','cartGood');
 		goodInCard.innerHTML = currentGood[0].name;
 		goodInCard.style.float = 'left';
 
 		var inp = document.createElement('input');
 		inp.setAttribute('type', 'number');
+		inp.setAttribute('class','cartInput')
 		inp.value = 1;
 		inp.style.float = 'right';
 
 		var closer = document.createElement('div');
-		closer.innerHTML = 'X';
+		closer.setAttribute('class','closeDiv');
+		closer.innerHTML = '<img src="images/times-circle.svg" alt="close"/>';
 		closer.style.float = 'right';
 		closer.onclick = function(){
 			cardBlock.removeChild(this.parentElement)

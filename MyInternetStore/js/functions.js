@@ -3,9 +3,9 @@ function showGoods(item){
 		'<h2 class="cartname">' + item.name + '</h2>' +
 		'<h6 class="cartWrite">' + item.description + '</h6>' + '<br>' + '<div class="img-container">' +
 		'<img class="img-fluid" src="' + item.img + '"/>' + '</div>' + '<br>' +
-		'<div class="cartprice">' + item.price + '$</div>' + '<br>' +
-		'<h5>' + item.present + '</h5>' +
-		'<button class="btn btn-warning btns" ddd = "'+item.name+'">' + item.add + '</button>';
+		'<div class="cartprice">' + item.price + ' грн.</div>' + '<br>' +
+		'<h5 class="cardAvil">' + item.present + '</h5>' +
+		'<button class="btn btn-warning btn-block btns" ddd = "'+item.name+'">' + item.add + '</button>';
 	data.innerHTML += otdelniyDiv
 }
 // function fun1() {
@@ -48,7 +48,7 @@ function inp3Handler(){
 function btn3Handler(){
 	data.innerHTML = '';
 	str.sort(function(y,n){
-		if(n.presence > y.presence){
+		if(n.present > y.present){
 			return 1
 		}else{
 			return -1
@@ -59,7 +59,7 @@ function btn3Handler(){
 function btn4Handler(){
 	data.innerHTML = '';
 	str.sort(function(n,y){
-		if(n.presence > y.presence){
+		if(n.present > y.present){
 			return 1
 		}else{
 			return -1
