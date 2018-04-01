@@ -21,7 +21,7 @@ function btnHandler(){
 		max = Infinity
 	}
 	var arr = str.filter(function(item){
-		return (item.price>= min && item.price <= max)
+		return (item.price>=min && item.price <= max)
 	})
 	data.innerHTML = ''
 	arr.forEach(showGoods)
