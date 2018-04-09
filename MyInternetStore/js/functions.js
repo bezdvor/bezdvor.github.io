@@ -17,13 +17,11 @@ function showGoods(item){
 function btnHandler(){
 	var min = parseInt(inp1.value,10);
 	var max = parseInt(inp2.value,10);
-	if(max<min){
-		max = Infinity
-	}
+	if(max<min){max = Infinity}
 	var arr = str.filter(function(item){
 		return (item.price>=min && item.price <= max)
-	})
-	data.innerHTML = ''
+	});
+	data.innerHTML = '';
 	arr.forEach(showGoods)
 }
 function btn2Handler(){
